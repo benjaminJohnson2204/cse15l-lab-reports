@@ -4,7 +4,7 @@ By Benjamin Johnson
 
 ## Contents
 
-### [Overview](#overview)
+### [Overview](#overview-1)
 
 ### [Installing VS Code](#installing-vs-code-1)
 
