@@ -205,7 +205,7 @@ This week in CSE 15L, we learned about bugs and how to identify and fix bugs. Fo
 
 The buggy program I chose for this report is `LinkedListExample.java`, which is an implementation of a Linked List that has a bug in the `append` method.
 
-1. Failure-inducing input: I wrote this JUnit test to induce failure in the buggy `append` method:
+- Failure-inducing input: I wrote this JUnit test to induce failure in the buggy `append` method:
 
 ```java
  @Test
@@ -219,7 +219,7 @@ The buggy program I chose for this report is `LinkedListExample.java`, which is 
     }
 ```
 
-2. An input that doesn't induce a failure:
+- An input that doesn't induce a failure:
 
 ```java
     @Test
@@ -231,7 +231,7 @@ The buggy program I chose for this report is `LinkedListExample.java`, which is 
     }
 ```
 
-3. Symptom (result of running tests):
+- Symptom (result of running tests):
 
 For the failure-inducing input: The program freezes for several minutes, then throws an `OutOfMemoryError`:
 ![](/images/week3/bugs_1.png)
@@ -239,7 +239,7 @@ For the failure-inducing input: The program freezes for several minutes, then th
 For the input that doesn't induce failure: The program runs the test with no errors and JUnit says it is "Ok":
 ![](/images/week3/bugs_2.png)
 
-4. Bug: The bug in the program is that the `append` method continually traverses the list and sets the current node's next node to the node that is being appended. This means that the program constantly appends that node and never reaches `null`, which is the condition for its loop to terminate. The input of only appending to the list one time does not induce this failure because there is a special case in the method to handle when the list is empty, which is the case before the first time it is appended to.
+- Bug: The bug in the program is that the `append` method continually traverses the list and sets the current node's next node to the node that is being appended. This means that the program constantly appends that node and never reaches `null`, which is the condition for its loop to terminate. The input of only appending to the list one time does not induce this failure because there is a special case in the method to handle when the list is empty, which is the case before the first time it is appended to.
 
 The fix for the bug is take the line that sets the current node's next node to the new node, and move it after the while loop instead of inside it.
 
