@@ -103,7 +103,7 @@ The fastest I could get everything to run was around 10 seconds. I think it's li
 
 Here is a video of me running these commands:
 
-https://benjaminjohnson2204.github.io/cse15l-lab-reports/videos/week9/CSELabsDoneQuick.mp4
+[https://benjaminjohnson2204.github.io/cse15l-lab-reports/videos/week9/CSELabsDoneQuick.mp4](https://benjaminjohnson2204.github.io/cse15l-lab-reports/videos/week9/CSELabsDoneQuick.mp4)
 
 Here is the full input and output:
 
